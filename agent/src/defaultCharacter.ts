@@ -3,7 +3,9 @@ import { type Character, ModelProviderName } from "@elizaos/core";
 export const defaultCharacter: Character = {
     name: "Eliza",
     username: "eliza",
-    plugins: [],
+    plugins: [
+        { name: "direct", description: "Direct client for REST API access" }
+    ],
     modelProvider: ModelProviderName.OPENAI,
     settings: {
         secrets: {},
