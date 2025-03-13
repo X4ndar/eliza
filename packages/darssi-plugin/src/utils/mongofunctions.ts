@@ -45,6 +45,7 @@ export interface CourseDoc {
   // Add or remove fields to match your schema
 }
 
+
 /**
  * Retrieves a course from the "Course" collection by its MongoDB _id.
  * Throws an error if no document is found for the given _id.
