@@ -1,10 +1,11 @@
 import { type Character, ModelProviderName } from "@elizaos/core";
+import directPlugin from "@elizaos/client-direct";
 
 export const defaultCharacter: Character = {
     name: "Eliza",
     username: "eliza",
     plugins: [
-        { name: "direct", description: "Direct client for REST API access" }
+        directPlugin
     ],
     modelProvider: ModelProviderName.OPENAI,
     settings: {
