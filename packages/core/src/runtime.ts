@@ -1805,3 +1805,20 @@ const formatKnowledge = (knowledge: KnowledgeItem[]) => {
         return cleanedText;
     }).join('\n\n'); // Separate distinct pieces with double newlines
 };
+
+// Helper to safely convert potential objects to strings for templates
+function safeStringify(value: any): string {
+  if (value === null || value === undefined) {
+    return '';
+  }
+  
+  if (typeof value === 'object' && value !== null) {
+    try {
+      return JSON.stringify(value);
+    } catch (error) {
+      return '';
+    }
+  }
+  
+  return String(value);
+}

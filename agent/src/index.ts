@@ -22,6 +22,9 @@ import {
 import { defaultCharacter } from "./defaultCharacter.ts";
 
 import { bootstrapPlugin } from "@elizaos/plugin-bootstrap";
+import { devschoolPlugin } from "@elizaos/plugin-devschool";
+import { darssiPlugin } from "@elizaos/darssi-plugin";
+import mongodbPlugin from "@elizaos-plugins/adapter-mongodb";
 import JSON5 from 'json5';
 
 import fs from "fs";
@@ -625,11 +628,7 @@ export async function createAgent(
         evaluators: [],
         character,
         // character.plugins are handled when clients are added
-        plugins: [
-            bootstrapPlugin,
-        ]
-            .flat()
-            .filter(Boolean),
+        plugins: [bootstrapPlugin, mongodbPlugin, darssiPlugin].flat().filter(Boolean),
         providers: [],
         managers: [],
         fetch: logFetch,
