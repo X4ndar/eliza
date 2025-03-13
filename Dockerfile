@@ -77,4 +77,4 @@ COPY --from=builder /app/my_characters ./my_characters
 EXPOSE 3000 5173
 
 # Command to start the application
-CMD ["sh", "-c", "pnpm start --characters=my_characters/darssi.character.json & pnpm start:client"]
+CMD ["sh", "-c", "pnpm start --characters=/app/my_characters/darssi.character.json & pnpm start:client"]
