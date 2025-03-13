@@ -1,7 +1,7 @@
 {
     "name": "Darssi Companion",
     "modelProvider": "openai",
-    "clients": ["direct"],
+    "clients": [],
     "plugins": [],
     "actions": [],
     "settings": {
